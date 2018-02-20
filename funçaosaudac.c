@@ -2,7 +2,7 @@
 
 saudacao()
 {
-	printf("Boa Noite\n");
+	printf("Boa Noite!\n");
 }
 
 int main(void)

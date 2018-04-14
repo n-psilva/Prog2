@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 
 
@@ -42,7 +42,7 @@ int main()
 
 	scanf("%d", &n2);
 
-    potencia(n1,n2,&pot);
+        potencia(n1,n2,&pot);
 
 	printf("A potencia de (%d,%d) e %d",n1,n2,pot);
 

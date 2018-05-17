@@ -1,4 +1,4 @@
-#include<stdio.h>
+ #include<stdio.h>
 #include<string.h>
 
 void menu(int *n1, int *n2)
@@ -41,17 +41,17 @@ int main()
 	
 	do{
 	
-	menu(&num1,&num2);
-	printf("\n%d,%d", num1,num2);
-	p=&num1;
-	p2=&num2;
-	res = soma(*p,*p2);
-	res2 = div(*p,*p2);
-	imprime(res,res2);
-    printf("\nDeseja continuar? SIM ou NAO : ");
-    scanf("%s",resp);
+	    menu(&num1,&num2);
+	    printf("\nOs numeros sao: %d,%d", num1,num2);
+	    p=&num1;
+	    p2=&num2;
+	    res = soma(*p,*p2);
+	    res2 = div(*p,*p2);
+	    imprime(res,res2);
+            printf("\nDeseja continuar? SIM ou NAO : ");
+            scanf("%s",resp);
     
-	}while ( strcmp(resp,"SIM") == 0);
+	  }while ( strcmp(resp,"SIM") == 0);
 	
 	return 0;
 }

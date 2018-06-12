@@ -19,7 +19,7 @@ int main()
 	char linha2[100];
 
 	int x=0;
-	int i;
+	int fimarq2;
 
 	fgets(linha,sizeof(linha),arq1);
 
@@ -35,48 +35,41 @@ int main()
 
 		
 
-		fgets(linha2,sizeof(linha2),arq2);
-
+		
+        fimarq2=fgets(linha2,sizeof(linha2),arq2);
 	
        if(fgets(linha, 100, arq1)!=NULL)
        {
-       	if(strcmp(linha,linha2) == -1)
+       	   if(strcmp(linha,linha2) == -1)
+       	   {
+       	        fprintf(arqgeral,"%s", linha);
+       		x++;
+       		if(x==3)
+       		fprintf(arqgeral,"\n", linha);
+	    }
 
-		fprintf(arqgeral,"%s\n", linha);
-        
-        else 
-		fprintf(arqgeral,"%s", linha2);
+		
+       else 
+       fprintf(arqgeral,"%s", linha2);
 	
-	   }
-	   if(!feof(arq2))
+       }
+	   
+        if(fimarq2!=NULL)
 	   {
-	   	if(strcmp(linha2,linha) == 1)
-
-		fprintf(arqgeral,"%s", linha2);
-		else
 		fprintf(arqgeral,"%s", linha2);
 	   }
 	 
 		
 
-	    
-
-	}while(!feof(arq1) || feof(arq2));
+    }while(!feof(arq1) || !feof(arq2));
     
+	printf("Arquivo gerado!");
 	
-	
-
-	
-
-
-
 	fclose(arq1);
 
 	fclose(arq2);
 
 	fclose(arqgeral);
-
-
 
 	
 
